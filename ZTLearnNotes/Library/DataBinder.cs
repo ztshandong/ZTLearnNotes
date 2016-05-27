@@ -9,7 +9,7 @@ namespace Library
 {
     class DataBinder
     {
-        public static void BoundCheckEdit(RepositoryItemCheckEdit lueCheck)
+        public static void BoundRepCheckEdit(RepositoryItemCheckEdit lueCheck)
         {
             lueCheck.AutoHeight = false;
             lueCheck.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;

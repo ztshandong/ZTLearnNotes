@@ -13,14 +13,14 @@ using DevExpress.XtraGrid;
 
 namespace Library.UserControl
 {
-    public partial class ucGridControl : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucBandedGridView : DevExpress.XtraEditors.XtraUserControl
     {
      
-        public ucGridControl()
+        public ucBandedGridView()
         {
             InitializeComponent();
            // gcSummary.DataSource = Common.GetTable();
-            DataBinder.BoundCheckEdit(rep_FlagCheck);
+            DataBinder.BoundRepCheckEdit(rep_FlagCheck);
         }
 
         public GridControl Gridcontrol

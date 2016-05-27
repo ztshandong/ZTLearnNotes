@@ -1,6 +1,6 @@
 ﻿namespace Library.UserControl
 {
-    partial class ucGridControl
+    partial class ucBandedGridView
     {
         /// <summary> 
         /// Required designer variable.
