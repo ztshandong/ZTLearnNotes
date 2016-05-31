@@ -1,4 +1,4 @@
-﻿namespace ZTLearnNotes
+﻿namespace ZTERP.Main
 {
     partial class XtraForm1
     {

@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Repository;
-using CommonClass;
-using DevExpress.XtraGrid.Columns;
-using Library.Forms;
 
-namespace ZTLearnNotes
+using DevExpress.XtraGrid.Columns;
+
+using ZTERP.Library.Forms;
+using ZTERP.CommonClass;
+
+namespace ZTERP.Main
 {
     public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
     {

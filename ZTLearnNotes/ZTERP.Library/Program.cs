@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ZTERP.Main
+namespace ZTERP.Library
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ZTERP.Main
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XtraForm1());
+            Application.Run(new Form1());
         }
     }
 }

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("C#.NET快速开发框架")]
-[assembly: AssemblyDescription("张涛制作")]
+[assembly: AssemblyTitle("ZTERP.Report")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("锦睿集团")]
-[assembly: AssemblyProduct("C#.NET快速开发框架")]
-[assembly: AssemblyCopyright("Copyright ©  2016  QQ:28400798")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ZTERP.Report")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("8399433c-42c8-43d7-a7eb-330cb83eb18e")]
+[assembly: Guid("21141a7b-b71e-4988-8328-bbb88e4d4ed7")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
