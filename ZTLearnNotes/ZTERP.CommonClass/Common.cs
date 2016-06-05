@@ -16,7 +16,7 @@ namespace ZTERP.CommonClass
             dt.Columns.Add("OrgCode");
             dt.Columns.Add("DocNo");
             dt.Rows.Add();
-            dt.Rows[0]["FlagCheck"] = "N";
+            dt.Rows[0]["FlagCheck"] = "Y";
             dt.Rows[0]["CreatedBy"] = "ZT";
             dt.Rows[0]["OrgCode"] = "SH";
             dt.Rows[0]["DocNo"] = "SHYD01050234";

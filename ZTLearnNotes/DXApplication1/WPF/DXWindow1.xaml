@@ -1,0 +1,41 @@
+﻿<dx:DXWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
+    x:Class="WPF.DXWindow1"
+    Title="DXWindow1" Height="350" Width="525"
+    >
+    <Viewbox x:Name="vbox" Margin="0,0,0,0">
+        <Canvas  x:Name="canvas" Height="1080" Width="1920">
+            <dxr:RibbonControl x:Name="rbc1" Height="1070" Canvas.Top="10" Width="1910">
+
+                <dxr:RibbonDefaultPageCategory Caption="defaultCategory">
+                    <dxr:RibbonPage Caption="Home">
+                        <dxr:RibbonPage.BindingGroup>
+                            <BindingGroup/>
+                        </dxr:RibbonPage.BindingGroup>
+                        <dxr:RibbonPageGroup Caption="Tools">
+                            <dxb:BarButtonItem Content="BarButtonItem"/>
+                            <dxb:BarButtonItem Content="BarButtonItem"/>
+                        </dxr:RibbonPageGroup>
+                        <dxr:RibbonPageGroup Caption="Ribbon Page Group">
+                            <dxb:BarButtonItem Content="BarButtonItem"/>
+                        </dxr:RibbonPageGroup>
+                        <dxr:RibbonPageGroup Caption="Ribbon Page Group"/>
+                    </dxr:RibbonPage>
+                </dxr:RibbonDefaultPageCategory>
+            </dxr:RibbonControl>
+            <dxn:NavBarControl Height="764" Canvas.Top="199" Width="224">
+                <dxn:NavBarControl.View>
+                    <dxn:NavigationPaneView/>
+                </dxn:NavBarControl.View>
+                <dxn:NavBarGroup x:Name="navBarGroup1" Header="navBarGroup1">
+                    <dxn:NavBarItem x:Name="navBarItem1" Content="navBarItem1"/>
+                </dxn:NavBarGroup>
+                <dxn:NavBarGroup x:Name="navBarGroup2" Header="navBarGroup2"/>
+                <dxn:NavBarGroup x:Name="navBarGroup3" Header="navBarGroup3"/>
+            </dxn:NavBarControl>
+        </Canvas>
+    </Viewbox>
+</dx:DXWindow>

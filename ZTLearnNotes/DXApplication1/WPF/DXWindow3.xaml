@@ -1,0 +1,21 @@
+﻿<dx:DXWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    x:Class="WPF.DXWindow3"
+    Title="DXWindow3" x:Name="xw1" Height="400" Width="400" Loaded="xw1_Loaded"
+    >
+
+    <Grid>
+        <Grid x:Name="grid1">
+
+            <dxb:MainMenuControl HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" >
+                <dxb:BarButtonItem Content="BarButtonItem"/>
+                <dxb:BarButtonItem Content="BarButtonItem"/>
+                <dxb:BarButtonItem Content="BarButtonItem"/>
+            </dxb:MainMenuControl>
+
+        </Grid>
+    </Grid>
+</dx:DXWindow>
