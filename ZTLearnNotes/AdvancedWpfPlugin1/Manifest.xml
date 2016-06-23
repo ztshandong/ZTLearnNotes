@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="AdvancedWpfPlugin1" SymbolicName="AdvancedWpfPlugin1" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="AdvancedWpfPlugin1.Activator" Policy="Immediate" />
+  <Runtime>
+    <Assembly Path="bin\AdvancedWpfPlugin1.dll" Share="false" />
+  </Runtime>
+  <Extension Point="UIShell.WpfShellPlugin.LinkGroups">
+    <LinkGroup DisplayName="AdvancedWpfPlugin1" DefaultContentSource="AdvancedWpfPlugin1.UserControl1">
+      <Link DisplayName="UserControl1" Source="AdvancedWpfPlugin1.UserControl1" />
+    </LinkGroup>
+  </Extension>
+</Bundle>

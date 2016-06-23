@@ -136,6 +136,7 @@
                                 <dxr:RibbonPage Caption="Ribbon Page"/>
                             </dxr:RibbonDefaultPageCategory>
                         </dxr:RibbonControl>
+                       
                         <dxr:RibbonStatusBarControl Grid.Row="2">
                             <dxr:RibbonStatusBarControl.RightItems>
                                 <dxb:BarButtonItem Content="BarButtonItem"/>

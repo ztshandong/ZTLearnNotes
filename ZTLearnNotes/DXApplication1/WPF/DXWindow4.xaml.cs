@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DevExpress.Xpf.Core;
-
+using DevExpress.Xpf;
 
 namespace WPF
 {
@@ -23,6 +23,12 @@ namespace WPF
         public DXWindow4()
         {
             InitializeComponent();
+
+        }
+
+        private void BarButtonItem1_ItemClick(object sender, DevExpress.Xpf.Bars.ItemClickEventArgs e)
+        {
+           
         }
     }
 }

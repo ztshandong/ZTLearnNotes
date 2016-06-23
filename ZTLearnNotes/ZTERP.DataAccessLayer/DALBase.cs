@@ -9,9 +9,24 @@ namespace ZTERP.DataAccessLayer
     public sealed class DALDLL { }
     public class DALBase
     {
-        public void tet()
+     public GetDataBaseType OneIns
         {
-            //GetDataBaseType.Instance.
+            get { return oneIns; }
         }
+        private GetDataBaseType oneIns = GetDataBaseType.Instance;
+
+        private  DataBaseType dbType = GetDataBaseType.Instance.CreateDataBaseType("ConnectDataBaseMSSQL", null);
+      //  private DataBaseType dbType = ConnectDataBaseMSSQL.Instance;
+
+        public DataBaseType DbType
+        {
+            get
+            {
+                return dbType;
+            }
+           
+        }
+     
+     
     }
 }

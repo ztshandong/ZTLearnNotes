@@ -1,19 +1,134 @@
 ﻿<dx:DXWindow
-    x:Class="WPF.DXWindow4"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
     xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
     xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar"
-    Title="DXWindow4" Height="350" Width="525"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduler"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxtm="http://schemas.devexpress.com/winfx/2008/xaml/treemap"
+    x:Class="WPF.DXWindow4"
+    Title="DXWindow4" Height="504.301" Width="540.054"
     >
 
     <Grid>
-        <DockPanel>
-            <dxb:MainMenuControl DockPanel.Dock="Top">
-                <dxb:BarSubItem Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph"></dxb:BarSubItem>
-            </dxb:MainMenuControl>        
-        </DockPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="colbar1" Width="100"/>
+                <ColumnDefinition x:Name="mainspace"/>
+            </Grid.ColumnDefinitions>
+            <dxn:NavBarControl x:Name="nbc1">
+                <dxn:NavBarControl.View>
+                    <dxn:SideBarView/>
+                </dxn:NavBarControl.View>
+                <dxn:NavBarGroup x:Name="navBarGroup1" Header="navBarGroup1" ImageSource="72.png" ImageSourceInNavPaneMenu="72.png">
+                    <dxn:NavBarItem x:Name="navBarItem1" Content="navBarItem1" ImageSource="72.png"/>
+                    <dxn:NavBarItem x:Name="navBarItem2" Content="navBarItem2"/>
+                </dxn:NavBarGroup>
+                <dxn:NavBarGroup x:Name="navBarGroup2" Header="navBarGroup2" ImageSource="1.jpg" ImageSourceInNavPaneMenu="1.jpg" GroupScrollMode="ScrollBar">
+                    <dxn:NavBarItem x:Name="navBarItem3" Content="navBarItem3"/>
+                </dxn:NavBarGroup>
+                <dxn:NavBarGroup x:Name="navBarGroup3" Header="navBarGroup3"/>
+                <dxn:NavBarGroup x:Name="navBarGroup4" Header="navBarGroup4"/>
+
+            </dxn:NavBarControl>
+        </Grid>
+        <dxr:RibbonStatusBarControl Grid.Row="3">
+            <dxr:RibbonStatusBarControl.RightItems>
+                <dxb:BarEditItem Content2="456" Content="123"/>
+            </dxr:RibbonStatusBarControl.RightItems>
+        </dxr:RibbonStatusBarControl>
+
+
+        <dxr:RibbonControl Grid.Row="0" RibbonStyle="Office2010" ToolbarShowMode="Hide" ShowApplicationButton="False" MenuIconStyle="Office2013" RibbonTitleBarVisibility="Collapsed">
+
+            <dxr:RibbonControl.PageHeaderItems>
+                <dxb:BarButtonItem Content="BarButtonItem"/>
+                <dxb:BarButtonItem Content="BarButtonItem"/>
+            </dxr:RibbonControl.PageHeaderItems>
+
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage x:Name="ribbonPage1" Caption="ribbonPage1">
+                    <dxr:RibbonPageGroup Caption="ribbonPageGroup1">
+                        <dxb:BarButtonItem x:Name="BarButtonItem" Content="BarButtonItem"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup x:Name="rpg1" Caption="rpg1" >
+                        <dxb:BarButtonItem x:Name="rgpbtn1" Content="rgpbtn1"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup x:Name="rpg2" Caption="rpg2" />
+                    <dxr:RibbonPageGroup x:Name="rpg3" Caption="rpg3" />
+                    <dxr:RibbonPageGroup x:Name="rpg4" Caption="rpg4" />
+                    <dxr:RibbonPageGroup x:Name="rpg5" Caption="rpg5" />
+                    <dxr:RibbonPageGroup x:Name="rpg6" Caption="rpg6" />
+                    <dxr:RibbonPageGroup x:Name="rpg7" Caption="rpg7" />
+                    <dxr:RibbonPageGroup x:Name="rpg8" Caption="rpg8" />
+                    <dxr:RibbonPageGroup x:Name="rpg9" Caption="rpg9" />
+                    <dxr:RibbonPageGroup x:Name="rpg10" Caption="rpg10"/>
+                </dxr:RibbonPage>
+                <dxr:RibbonPage Caption="Ribbon Page">
+                    <dxr:RibbonPageGroup Caption="Ribbon Page Group">
+                        <dxb:BarButtonItem Content="BarButtonItem"/>
+                    </dxr:RibbonPageGroup>
+                    <dxr:RibbonPageGroup Caption="Ribbon Page Group"/>
+                </dxr:RibbonPage>
+                <dxr:RibbonPage Caption="Ribbon Page"/>
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+
+
+        <dxb:MainMenuControl Grid.Row="1" >
+            <dxb:BarSubItem x:Name="barmenu1"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarSubItem x:Name="barmenu2"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                    <dxb:BarButtonItem x:Name="BarButtonItem2"  Content="BarButtonItem"  />
+                </dxb:BarSubItem>
+                <dxb:BarButtonItem x:Name="BarButtonItem1"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu3"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem3"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu4"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem4"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu5"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem5"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu6"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem6"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu7"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem7"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu8"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem8"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu9"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem9"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu10"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem10"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu11"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem11"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu12"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem12"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="barmenu13"  Content="BarSubItem" Glyph="{dx:DXImage Image=Apply_32x32.png}" LargeGlyph="{dx:DXImage Image=Apply_32x32.png}" BarItemDisplayMode="ContentAndGlyph">
+                <dxb:BarButtonItem x:Name="BarButtonItem13"  Content="BarButtonItem"  />
+            </dxb:BarSubItem>
+        </dxb:MainMenuControl>
+        <dxe:PopupCalcEdit HorizontalAlignment="Left" Margin="10,47,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150"/>
+        <dxe:PopupColorEdit HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="150"/>
+        <dxe:CameraControl HorizontalAlignment="Left" Margin="337,10,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+
     </Grid>
 </dx:DXWindow>

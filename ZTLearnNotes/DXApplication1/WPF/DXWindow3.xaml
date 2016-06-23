@@ -1,21 +1,48 @@
 ﻿<dx:DXWindow
+    xmlns:my="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     x:Class="WPF.DXWindow3"
-    Title="DXWindow3" x:Name="xw1" Height="400" Width="400" Loaded="xw1_Loaded"
+    Title="DXWindow3" x:Name="xw1" Height="458.495" Width="538.495" Loaded="xw1_Loaded"
     >
 
     <Grid>
-        <Grid x:Name="grid1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <dx:SimpleButton x:Name="btn1" Content="btn1" Height="20" Click="btn1_Click"/>
+            <dx:SimpleButton x:Name="btn2" Content="btn2"  Height="20" Click="btn2_Click"/>
+            <dx:SimpleButton x:Name="btn3" Content="btn3"  Height="20" Click="btn3_Click"/>
+            <dx:SimpleButton x:Name="btn4" Content="btn4"  Height="20" Click="btn4_Click"/>
+            <dxe:PopupColorEdit />
+        </StackPanel>
+        <dxpg:PivotExcelFieldListControl Owner="{Binding ElementName=pg}" x:Name="pe" Grid.Row="0" Grid.Column="0"/>
+        <dxpg:PivotGridControl x:Name="pg" Grid.Row="1" GotFocus="pg_GotFocus" >
+            <dxpg:PivotGridControl.Fields>
+                <dxpg:PivotGridField Area="RowArea" FieldName="DocNo" Caption="Row Field"/>
+                <dxpg:PivotGridField Area="RowArea" FieldName="OrgCode" Caption="Row Field"/>
+                <dxpg:PivotGridField Area="ColumnArea" FieldName="CreatedBy" Caption="Column Field"/>
+            </dxpg:PivotGridControl.Fields>
+        </dxpg:PivotGridControl>
 
-            <dxb:MainMenuControl HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" >
-                <dxb:BarButtonItem Content="BarButtonItem"/>
-                <dxb:BarButtonItem Content="BarButtonItem"/>
-                <dxb:BarButtonItem Content="BarButtonItem"/>
-            </dxb:MainMenuControl>
+        <WindowsFormsHost  Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top">
+            <my:PropertyGrid x:Name="PropertyGrid1"/>
+        </WindowsFormsHost>
+        
+        <dxprg:PropertyGridControl Name="progrid"  Grid.Row="0" Grid.RowSpan="3" Grid.Column="2"  />
 
-        </Grid>
+
     </Grid>
 </dx:DXWindow>

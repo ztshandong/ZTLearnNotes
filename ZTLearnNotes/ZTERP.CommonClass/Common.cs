@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ZTERP.CommonClass
 {
-    public class Common
+    public class CommonClass
     {
         public static DataTable GetTable()
         {
@@ -34,4 +34,6 @@ namespace ZTERP.CommonClass
         }
 
     }
+    public class User
+    { }
 }

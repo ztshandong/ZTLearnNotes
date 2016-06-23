@@ -62,20 +62,20 @@ namespace ZTERP.DataAccessLayer
             #endregion
 
             //方法二
-            try
-            {
-                con = (DataBaseType)typeof(DALDLL).Assembly.CreateInstance(SpaceName + "." + ClassName, true,
-                        bf, null, args, null, null);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            //try
+            //{
+            //    con = (DataBaseType)typeof(DALDLL).Assembly.CreateInstance(SpaceName + "." + ClassName, true,
+            //            bf, null, args, null, null);
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new Exception(ex.Message);
+            //}
 
-            //if (type== "MSSQL") con = ConnectDataBaseMSSQL.Instance;
-            //else if (type == "Oracle") con = ConnectDataBaseOracle.Instance;
-            //else if (type == "MySQL") con = ConnectDataBaseMySQL.Instance;
-            //else if (type == "Accese") con = ConnectDataBaseAccese.Instance;
+            if (ClassName == "MSSQL") con = ConnectDataBaseMSSQL.Instance;
+            else if (ClassName == "Oracle") con = DataBaseOracle.Instance;
+            else if (ClassName == "MySQL") con = DataBaseMySQL.Instance;
+            else if (ClassName == "Accese") con = DataBaseAccese.Instance;
             return con;
         }
 

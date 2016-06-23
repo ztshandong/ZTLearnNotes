@@ -32,6 +32,8 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.slcSummary = new DevExpress.XtraEditors.SplitContainerControl();
             this.laySearch = new DevExpress.XtraLayout.LayoutControl();
+            this.cameraControl1 = new DevExpress.XtraEditors.Camera.CameraControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnGetSelectedTable = new DevExpress.XtraEditors.SimpleButton();
             this.btnBindSummary = new DevExpress.XtraEditors.SimpleButton();
             this.btnCloseWait = new DevExpress.XtraEditors.SimpleButton();
@@ -40,13 +42,14 @@
             this.layGroupRoot = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layParent1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layG1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layG2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.laybtnCloseWait = new DevExpress.XtraLayout.LayoutControlItem();
             this.laybtnShowWait = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.laybtnBindSummary = new DevExpress.XtraLayout.LayoutControlItem();
             this.layGetSelectedTable = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layParent2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layG3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -57,7 +60,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tpSummary = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.ucGridView1 = new Library.UserControl.ucGridView();
+            this.ucGridView1 = new ZTERP.Library.UserControl.ucGridView();
             this.tpDetail = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.slcDetail = new DevExpress.XtraEditors.SplitContainerControl();
@@ -77,13 +80,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layGroupRoot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layParent1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnCloseWait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnShowWait)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnBindSummary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layGetSelectedTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layParent2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -139,12 +143,14 @@
             this.slcSummary.Panel2.Controls.Add(this.pnlSummary);
             this.slcSummary.Panel2.Text = "Panel2";
             this.slcSummary.Size = new System.Drawing.Size(1092, 758);
-            this.slcSummary.SplitterPosition = 209;
+            this.slcSummary.SplitterPosition = 197;
             this.slcSummary.TabIndex = 0;
             this.slcSummary.Text = "splitContainerControl1";
             // 
             // laySearch
             // 
+            this.laySearch.Controls.Add(this.cameraControl1);
+            this.laySearch.Controls.Add(this.simpleButton1);
             this.laySearch.Controls.Add(this.btnGetSelectedTable);
             this.laySearch.Controls.Add(this.btnBindSummary);
             this.laySearch.Controls.Add(this.btnCloseWait);
@@ -154,15 +160,34 @@
             this.laySearch.Name = "laySearch";
             this.laySearch.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(523, 425, 372, 454);
             this.laySearch.Root = this.layoutControlGroup1;
-            this.laySearch.Size = new System.Drawing.Size(1092, 209);
+            this.laySearch.Size = new System.Drawing.Size(1092, 197);
             this.laySearch.TabIndex = 0;
             this.laySearch.Text = "layoutControl1";
             // 
+            // cameraControl1
+            // 
+            this.cameraControl1.Location = new System.Drawing.Point(12, 12);
+            this.cameraControl1.Name = "cameraControl1";
+            this.cameraControl1.Size = new System.Drawing.Size(331, 173);
+            this.cameraControl1.StyleController = this.laySearch;
+            this.cameraControl1.TabIndex = 9;
+            this.cameraControl1.Text = "cameraControl1";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(347, 125);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(197, 22);
+            this.simpleButton1.StyleController = this.laySearch;
+            this.simpleButton1.TabIndex = 8;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // btnGetSelectedTable
             // 
-            this.btnGetSelectedTable.Location = new System.Drawing.Point(381, 90);
+            this.btnGetSelectedTable.Location = new System.Drawing.Point(347, 97);
             this.btnGetSelectedTable.Name = "btnGetSelectedTable";
-            this.btnGetSelectedTable.Size = new System.Drawing.Size(163, 22);
+            this.btnGetSelectedTable.Size = new System.Drawing.Size(197, 24);
             this.btnGetSelectedTable.StyleController = this.laySearch;
             this.btnGetSelectedTable.TabIndex = 7;
             this.btnGetSelectedTable.Text = "GetSelectedTable";
@@ -170,9 +195,9 @@
             // 
             // btnBindSummary
             // 
-            this.btnBindSummary.Location = new System.Drawing.Point(381, 64);
+            this.btnBindSummary.Location = new System.Drawing.Point(347, 68);
             this.btnBindSummary.Name = "btnBindSummary";
-            this.btnBindSummary.Size = new System.Drawing.Size(163, 22);
+            this.btnBindSummary.Size = new System.Drawing.Size(197, 25);
             this.btnBindSummary.StyleController = this.laySearch;
             this.btnBindSummary.TabIndex = 6;
             this.btnBindSummary.Text = "BindSummary";
@@ -180,10 +205,10 @@
             // 
             // btnCloseWait
             // 
-            this.btnCloseWait.Location = new System.Drawing.Point(381, 12);
+            this.btnCloseWait.Location = new System.Drawing.Point(347, 12);
             this.btnCloseWait.MaximumSize = new System.Drawing.Size(220, 50);
             this.btnCloseWait.Name = "btnCloseWait";
-            this.btnCloseWait.Size = new System.Drawing.Size(163, 22);
+            this.btnCloseWait.Size = new System.Drawing.Size(197, 24);
             this.btnCloseWait.StyleController = this.laySearch;
             this.btnCloseWait.TabIndex = 5;
             this.btnCloseWait.Text = "CloseWait";
@@ -191,10 +216,10 @@
             // 
             // btnShowWait
             // 
-            this.btnShowWait.Location = new System.Drawing.Point(381, 38);
+            this.btnShowWait.Location = new System.Drawing.Point(347, 40);
             this.btnShowWait.MaximumSize = new System.Drawing.Size(220, 50);
             this.btnShowWait.Name = "btnShowWait";
-            this.btnShowWait.Size = new System.Drawing.Size(163, 22);
+            this.btnShowWait.Size = new System.Drawing.Size(197, 24);
             this.btnShowWait.StyleController = this.laySearch;
             this.btnShowWait.TabIndex = 4;
             this.btnShowWait.Text = "ShowWait";
@@ -208,7 +233,7 @@
             this.layGroupRoot});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1092, 209);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1092, 197);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layGroupRoot
@@ -219,7 +244,7 @@
             this.layParent2});
             this.layGroupRoot.Location = new System.Drawing.Point(0, 0);
             this.layGroupRoot.Name = "layGroupRoot";
-            this.layGroupRoot.Size = new System.Drawing.Size(1072, 189);
+            this.layGroupRoot.Size = new System.Drawing.Size(1072, 177);
             // 
             // layParent1
             // 
@@ -229,24 +254,27 @@
             this.layG2});
             this.layParent1.Location = new System.Drawing.Point(0, 0);
             this.layParent1.Name = "layParent1";
-            this.layParent1.Size = new System.Drawing.Size(536, 189);
+            this.layParent1.Size = new System.Drawing.Size(536, 177);
             // 
             // layG1
             // 
             this.layG1.GroupBordersVisible = false;
             this.layG1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.emptySpaceItem2});
+            this.layoutControlItem2});
             this.layG1.Location = new System.Drawing.Point(0, 0);
             this.layG1.Name = "layG1";
-            this.layG1.Size = new System.Drawing.Size(369, 189);
+            this.layG1.Size = new System.Drawing.Size(335, 177);
             // 
-            // emptySpaceItem2
+            // layoutControlItem2
             // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(369, 189);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.Control = this.cameraControl1;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(162, 20);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(335, 177);
+            this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // layG2
             // 
@@ -256,10 +284,11 @@
             this.laybtnShowWait,
             this.emptySpaceItem1,
             this.laybtnBindSummary,
-            this.layGetSelectedTable});
-            this.layG2.Location = new System.Drawing.Point(369, 0);
+            this.layGetSelectedTable,
+            this.layoutControlItem1});
+            this.layG2.Location = new System.Drawing.Point(335, 0);
             this.layG2.Name = "layG2";
-            this.layG2.Size = new System.Drawing.Size(167, 189);
+            this.layG2.Size = new System.Drawing.Size(201, 177);
             // 
             // laybtnCloseWait
             // 
@@ -268,7 +297,7 @@
             this.laybtnCloseWait.MaxSize = new System.Drawing.Size(220, 50);
             this.laybtnCloseWait.MinSize = new System.Drawing.Size(68, 26);
             this.laybtnCloseWait.Name = "laybtnCloseWait";
-            this.laybtnCloseWait.Size = new System.Drawing.Size(167, 26);
+            this.laybtnCloseWait.Size = new System.Drawing.Size(201, 28);
             this.laybtnCloseWait.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.laybtnCloseWait.TextSize = new System.Drawing.Size(0, 0);
             this.laybtnCloseWait.TextVisible = false;
@@ -276,11 +305,11 @@
             // laybtnShowWait
             // 
             this.laybtnShowWait.Control = this.btnShowWait;
-            this.laybtnShowWait.Location = new System.Drawing.Point(0, 26);
+            this.laybtnShowWait.Location = new System.Drawing.Point(0, 28);
             this.laybtnShowWait.MaxSize = new System.Drawing.Size(220, 50);
             this.laybtnShowWait.MinSize = new System.Drawing.Size(71, 26);
             this.laybtnShowWait.Name = "laybtnShowWait";
-            this.laybtnShowWait.Size = new System.Drawing.Size(167, 26);
+            this.laybtnShowWait.Size = new System.Drawing.Size(201, 28);
             this.laybtnShowWait.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.laybtnShowWait.TextSize = new System.Drawing.Size(0, 0);
             this.laybtnShowWait.TextVisible = false;
@@ -288,21 +317,21 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 104);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 139);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(167, 85);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(201, 38);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // laybtnBindSummary
             // 
             this.laybtnBindSummary.Control = this.btnBindSummary;
-            this.laybtnBindSummary.Location = new System.Drawing.Point(0, 52);
+            this.laybtnBindSummary.Location = new System.Drawing.Point(0, 56);
             this.laybtnBindSummary.MaxSize = new System.Drawing.Size(220, 50);
             this.laybtnBindSummary.MinSize = new System.Drawing.Size(52, 26);
             this.laybtnBindSummary.Name = "laybtnBindSummary";
-            this.laybtnBindSummary.Size = new System.Drawing.Size(167, 26);
+            this.laybtnBindSummary.Size = new System.Drawing.Size(201, 29);
             this.laybtnBindSummary.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.laybtnBindSummary.TextSize = new System.Drawing.Size(0, 0);
             this.laybtnBindSummary.TextVisible = false;
@@ -310,14 +339,25 @@
             // layGetSelectedTable
             // 
             this.layGetSelectedTable.Control = this.btnGetSelectedTable;
-            this.layGetSelectedTable.Location = new System.Drawing.Point(0, 78);
+            this.layGetSelectedTable.Location = new System.Drawing.Point(0, 85);
             this.layGetSelectedTable.MaxSize = new System.Drawing.Size(220, 50);
             this.layGetSelectedTable.MinSize = new System.Drawing.Size(113, 26);
             this.layGetSelectedTable.Name = "layGetSelectedTable";
-            this.layGetSelectedTable.Size = new System.Drawing.Size(167, 26);
+            this.layGetSelectedTable.Size = new System.Drawing.Size(201, 28);
             this.layGetSelectedTable.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layGetSelectedTable.TextSize = new System.Drawing.Size(0, 0);
             this.layGetSelectedTable.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.simpleButton1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 113);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(201, 26);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(201, 26);
+            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
             // 
             // layParent2
             // 
@@ -328,7 +368,7 @@
             this.layParent2.Location = new System.Drawing.Point(536, 0);
             this.layParent2.Name = "layParent2";
             this.layParent2.OptionsTableLayoutItem.ColumnIndex = 1;
-            this.layParent2.Size = new System.Drawing.Size(536, 189);
+            this.layParent2.Size = new System.Drawing.Size(536, 177);
             // 
             // layG3
             // 
@@ -337,14 +377,14 @@
             this.emptySpaceItem3});
             this.layG3.Location = new System.Drawing.Point(0, 0);
             this.layG3.Name = "layG3";
-            this.layG3.Size = new System.Drawing.Size(231, 189);
+            this.layG3.Size = new System.Drawing.Size(231, 177);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(231, 189);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(231, 177);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layG4
@@ -354,14 +394,14 @@
             this.emptySpaceItem4});
             this.layG4.Location = new System.Drawing.Point(231, 0);
             this.layG4.Name = "layG4";
-            this.layG4.Size = new System.Drawing.Size(305, 189);
+            this.layG4.Size = new System.Drawing.Size(305, 177);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 0);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(305, 189);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(305, 177);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // pnlSearch
@@ -369,7 +409,7 @@
             this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSearch.Location = new System.Drawing.Point(0, 0);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(1092, 209);
+            this.pnlSearch.Size = new System.Drawing.Size(1092, 197);
             this.pnlSearch.TabIndex = 1;
             // 
             // pnlSummary
@@ -378,7 +418,7 @@
             this.pnlSummary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSummary.Location = new System.Drawing.Point(0, 0);
             this.pnlSummary.Name = "pnlSummary";
-            this.pnlSummary.Size = new System.Drawing.Size(1092, 544);
+            this.pnlSummary.Size = new System.Drawing.Size(1092, 556);
             this.pnlSummary.TabIndex = 0;
             // 
             // xtraTabControl1
@@ -387,7 +427,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tpSummary;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1088, 540);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1088, 552);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tpSummary,
@@ -397,7 +437,7 @@
             // 
             this.tpSummary.Controls.Add(this.panelControl3);
             this.tpSummary.Name = "tpSummary";
-            this.tpSummary.Size = new System.Drawing.Size(1082, 511);
+            this.tpSummary.Size = new System.Drawing.Size(1082, 523);
             this.tpSummary.Text = "总和";
             // 
             // panelControl3
@@ -406,7 +446,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1082, 511);
+            this.panelControl3.Size = new System.Drawing.Size(1082, 523);
             this.panelControl3.TabIndex = 0;
             // 
             // ucGridView1
@@ -415,14 +455,14 @@
             this.ucGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucGridView1.Location = new System.Drawing.Point(2, 2);
             this.ucGridView1.Name = "ucGridView1";
-            this.ucGridView1.Size = new System.Drawing.Size(1078, 507);
+            this.ucGridView1.Size = new System.Drawing.Size(1078, 519);
             this.ucGridView1.TabIndex = 0;
             // 
             // tpDetail
             // 
             this.tpDetail.Controls.Add(this.panelControl4);
             this.tpDetail.Name = "tpDetail";
-            this.tpDetail.Size = new System.Drawing.Size(1082, 511);
+            this.tpDetail.Size = new System.Drawing.Size(1082, 523);
             this.tpDetail.Text = "明细";
             // 
             // panelControl4
@@ -431,7 +471,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1082, 511);
+            this.panelControl4.Size = new System.Drawing.Size(1082, 523);
             this.panelControl4.TabIndex = 0;
             // 
             // slcDetail
@@ -444,7 +484,7 @@
             this.slcDetail.Panel1.Text = "Panel1";
             this.slcDetail.Panel2.Controls.Add(this.panelControl6);
             this.slcDetail.Panel2.Text = "Panel2";
-            this.slcDetail.Size = new System.Drawing.Size(1078, 507);
+            this.slcDetail.Size = new System.Drawing.Size(1078, 519);
             this.slcDetail.SplitterPosition = 114;
             this.slcDetail.TabIndex = 0;
             this.slcDetail.Text = "splitContainerControl2";
@@ -463,7 +503,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(1078, 388);
+            this.panelControl6.Size = new System.Drawing.Size(1078, 400);
             this.panelControl6.TabIndex = 0;
             // 
             // gcDetail
@@ -472,7 +512,7 @@
             this.gcDetail.Location = new System.Drawing.Point(2, 2);
             this.gcDetail.MainView = this.gvDetail;
             this.gcDetail.Name = "gcDetail";
-            this.gcDetail.Size = new System.Drawing.Size(1074, 384);
+            this.gcDetail.Size = new System.Drawing.Size(1074, 396);
             this.gcDetail.TabIndex = 0;
             this.gcDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDetail});
@@ -512,13 +552,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layGroupRoot)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layParent1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnCloseWait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnShowWait)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laybtnBindSummary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layGetSelectedTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layParent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layG3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -580,11 +621,14 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraEditors.SimpleButton btnBindSummary;
         private DevExpress.XtraLayout.LayoutControlItem laybtnBindSummary;
         private Library.UserControl.ucGridView ucGridView1;
         private DevExpress.XtraEditors.SimpleButton btnGetSelectedTable;
         private DevExpress.XtraLayout.LayoutControlItem layGetSelectedTable;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.Camera.CameraControl cameraControl1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

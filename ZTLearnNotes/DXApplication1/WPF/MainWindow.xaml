@@ -72,6 +72,7 @@
             </dxe:TextEdit>
             <dxe:PasswordBoxEdit Name="userPWD" Password="33333" Canvas.Left="730" Canvas.Top="114" Width="198" Height="89" Background="{DynamicResource ButtonBackground}"/>
             <dx:SimpleButton x:Name="btnTest" Content="测试按钮" Canvas.Left="379" Canvas.Top="60" Height="74" Width="132"/>
+            <dxe:CameraControl Height="468" Canvas.Left="217" Canvas.Top="338" Width="584"/>
         </Canvas>
     </Viewbox>
 </dx:DXWindow>

@@ -14,12 +14,13 @@ using DevExpress.XtraGrid.Columns;
 
 using ZTERP.Library.Forms;
 using ZTERP.CommonClass;
+using ZTERP.DataAccessLayer;
 
 namespace ZTERP.Main
 {
     public partial class XtraForm1 : DevExpress.XtraEditors.XtraForm
     {
-        DataTable dt = Common.GetTable();
+        DataTable dt = CommonClass.CommonClass.GetTable();
         public XtraForm1()
         {
             InitializeComponent();
@@ -72,6 +73,15 @@ namespace ZTERP.Main
             DataTable dt = ucGridView1.GetSelectedTable();
         }
 
-
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DALBase dal1 = new DALBase();
+            DALBase dal2 = new DALBase();
+            if (object.ReferenceEquals(dal1.DbType, dal2.DbType))
+                MessageBox.Show("DbType1个");
+            if (object.ReferenceEquals(dal1.OneIns, dal2.OneIns))
+                MessageBox.Show("OneIns1个");
+            
+        }
     }
 }
