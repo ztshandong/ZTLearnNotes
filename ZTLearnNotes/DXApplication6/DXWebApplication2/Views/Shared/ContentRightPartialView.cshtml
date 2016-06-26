@@ -1,0 +1,7 @@
+<div class="rightPanel">
+    @* DXCOMMENT: Configure the right panel's treeview *@
+    @Html.DevExpress().TreeView(settings => {
+        settings.Name = "RightTreeView";
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+    }).BindToXML(HttpContext.Current.Server.MapPath("~/App_Data/SideMenu.xml"), "/menu/*").GetHtml()
+</div>
