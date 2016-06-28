@@ -8,8 +8,7 @@ namespace DXWebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
+        // GET: Homepublic ActionResult Index()
         {
             return View();
         }
